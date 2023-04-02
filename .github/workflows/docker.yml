@@ -46,7 +46,7 @@ jobs:
           platforms: linux/amd64
           push: true
           //tags: ${{ steps.meta.outputs.tags }}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/chatgpt-next-webe:latest
+          tags: chatgpt-next-webe:latest
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           labels: ${{ steps.meta.outputs.labels }}
