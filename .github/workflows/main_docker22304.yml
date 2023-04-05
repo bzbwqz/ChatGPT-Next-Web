@@ -31,6 +31,8 @@ jobs:
       with:
         push: true
         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_c6bd52b00eb14be881b877332363568a }}/chatgpt-next-webe:${{ github.sha }}
+        build-args: |
+          OPENAI_API_KEY=${{ secrets.OPENAIAPIKEY }}
         file: ./Dockerfile
 
   deploy:
