@@ -27,6 +27,8 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_156d4c9d17704cfdaa03cc02bf1f9555 }}
 
     - name: Build and push container image to registry
+      env:
+          OPENAI_API_KEY: ${{ secrets.OPENAIAPIKEY }}
       uses: docker/build-push-action@v2
       with:
         push: true
