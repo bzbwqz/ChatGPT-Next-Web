@@ -14,7 +14,7 @@ FROM base AS builder
 
 RUN apk update && apk add --no-cache git
 
-ENV OPENAI_API_KEY=${{ secrets.OPENAIAPIKEY }}
+ENV OPENAI_API_KEY=""
 ENV CODE=""
 ARG DOCKER=true
 
@@ -27,7 +27,7 @@ RUN yarn build
 FROM base AS runner
 WORKDIR /app
 
-ENV OPENAI_API_KEY=${{ secrets.OPENAIAPIKEY }}
+ENV OPENAI_API_KEY=""
 ENV CODE=""
 
 COPY --from=builder /app/public ./public
