@@ -15,7 +15,7 @@ FROM base AS builder
 RUN apk update && apk add --no-cache git
 
 ENV OPENAI_API_KEY=$OPENAIAPIKEY
-ENV CODE=""
+ENV CODE="gpt"
 ARG DOCKER=true
 
 WORKDIR /app
@@ -28,7 +28,7 @@ FROM base AS runner
 WORKDIR /app
 
 ENV OPENAI_API_KEY=$OPENAIAPIKEY
-ENV CODE=""
+ENV CODE="gpt"
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
