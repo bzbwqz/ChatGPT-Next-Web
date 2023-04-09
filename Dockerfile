@@ -10,8 +10,9 @@ COPY package.json yarn.lock ./
 
 RUN yarn install
 
+# create new ARG
 FROM base AS builder
-
+ARG OPENAIAPIKEY
 RUN apk update && apk add --no-cache git
 
 ENV OPENAI_API_KEY=$OPENAIAPIKEY
@@ -26,7 +27,7 @@ RUN yarn build
 
 FROM base AS runner
 WORKDIR /app
-
+ARG OPENAIAPIKEY
 ENV OPENAI_API_KEY=$OPENAIAPIKEY
 ENV CODE="gpt"
 
