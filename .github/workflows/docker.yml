@@ -47,8 +47,7 @@ jobs:
           push: true
           # tags: ${{ steps.meta.outputs.tags }}
           tags: bzbwqz/chatgpt-next-webe:latest
-          build-args: |
-           OPENAI_API_KEY=${{ secrets.OPENAIAPIKEY }}
+          build-arg: OPENAI_API_KEY=${{ secrets.OPENAIAPIKEY }}
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           labels: ${{ steps.meta.outputs.labels }}
