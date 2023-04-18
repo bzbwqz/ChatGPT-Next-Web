@@ -7,10 +7,10 @@ import { getBuildConfig } from "./config/build";
 const buildConfig = getBuildConfig();
 
 export const metadata = {
-  title: "AIGC Web - MAKE AI EASY",
+  title: "MAKE AI EASY",
   description: "MAKE AI EASY.",
   appleWebApp: {
-    title: "AIGC-MAKE AI EASY",
+    title: "MAKE AI EASY",
     statusBarStyle: "default",
   },
   themeColor: "#fafafa",
