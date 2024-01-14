@@ -59,4 +59,4 @@ jobs:
           app-name: 'auagpt-webapp-42woz76d24pxw'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A6605EA35FE5448399D805785422112E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_AUAGPT }}
